@@ -10,12 +10,16 @@ public void setup(){
 }
 
 public void draw(){
+  background(255);
   dibujarRectangulos();
+  fill(#C11010);
+  stroke(#FCF32E);
 }
 
 public void dibujarRectangulos(){
   for(float x=coordenadasRect.x;x<width;x+= (ancho+distEntreRect)){
-    rect(x,coordenadasRect.y,ancho,alto);
-  }
-  
+    for(float y=coordenadasRect.y;y<height;y+= (alto+distEntreRect)){
+      rect(x,y,ancho,alto);
+    }
+  } 
 }
